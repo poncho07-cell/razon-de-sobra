@@ -47,7 +47,8 @@
     /* ===== COMPUERTA DE EDAD ===== */
     #age-gate { position:fixed; inset:0; z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 24px; overflow:hidden; transition:opacity 0.7s ease, visibility 0.7s; }
     #age-gate.hidden { opacity:0; visibility:hidden; }
-    #age-gate .ag-bg { position:absolute; inset:-20px; z-index:0; background:var(--negro) url('assets/age-bg.jpg') center/cover; filter:blur(2px) brightness(0.8) saturate(1.08); transform:scale(1.04); }
+    #age-gate .ag-bg { position:absolute; inset:0; z-index:0; overflow:hidden; background:var(--negro); }
+    #age-gate .ag-bg img { position:absolute; top:50%; left:50%; width:calc(100% + 40px); height:calc(100% + 40px); transform:translate(-50%,-50%); object-fit:cover; -webkit-filter:blur(2px) brightness(0.8) saturate(1.08); filter:blur(2px) brightness(0.8) saturate(1.08); }
     #age-gate .ag-scrim { position:absolute; inset:0; z-index:1; background:radial-gradient(120% 100% at 50% 35%, rgba(23,19,13,0.20), rgba(11,9,6,0.68) 78%); }
     #age-gate .ag-content { position:relative; z-index:2; }
     #age-gate .brand { margin-bottom:6px; display:flex; justify-content:center; }
@@ -139,7 +140,7 @@
     .ep-glow { position:absolute; width:80%; height:58%; background:radial-gradient(ellipse at center, rgba(201,166,83,0.22), transparent 70%); filter:blur(28px); }
     .ep-float { animation:floaty 6s ease-in-out infinite; height:100%; display:flex; align-items:center; justify-content:center; }
     @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
-    .ep-bottle img { max-height:580px; max-width:100%; object-fit:contain; cursor:pointer; filter:drop-shadow(0 40px 50px rgba(0,0,0,0.65)); transition:transform 0.55s cubic-bezier(.2,.7,.2,1); }
+    .ep-bottle img { height:580px; width:auto; max-width:100%; object-fit:contain; cursor:pointer; filter:drop-shadow(0 40px 50px rgba(0,0,0,0.65)); transition:transform 0.55s cubic-bezier(.2,.7,.2,1); }
     .ep-bottle img:hover { transform:scale(1.06); }
     .ep-stage.no-img img { display:none; }
     .ep-ph { display:none; flex-direction:column; align-items:center; gap:12px; color:var(--hueso-mute); }
@@ -243,7 +244,8 @@
     #cierre blockquote { font-family:var(--display); font-weight:500; text-transform:uppercase; font-size:clamp(28px,4.4vw,58px); line-height:1.25; letter-spacing:1px; color:var(--hueso); max-width:980px; margin:0 auto; }
     #cierre .sobra { display:block; text-align:center; margin-top:26px; }
     #cierre .cierre-img { max-width:520px; margin:44px auto 0; }
-    #cierre .cierre-img .frame { aspect-ratio:1/1; }
+    #cierre .cierre-img .frame { aspect-ratio:1/1; background:transparent; border:none; }
+    #cierre .cierre-img .frame img { object-fit:contain; }
 
     /* ===== FOOTER ===== */
     #footer { background:#080604; padding:60px 56px 48px; border-top:1px solid var(--linea-soft); display:grid; grid-template-columns:repeat(4,1fr); gap:40px; align-items:start; }
@@ -294,7 +296,7 @@
       .ep-info .ex-desc { margin-left:auto; margin-right:auto; }
       .ex-specs { justify-content:center; }
       .ep-stage { height:440px; }
-      .ep-bottle img { max-height:420px; }
+      .ep-bottle img { height:420px; width:auto; max-width:86vw; }
       .step { grid-template-columns:50px 1fr; gap:16px 20px; padding:30px 0; }
       .step:hover { padding-left:8px; }
       .step .st-desc { grid-column:1 / -1; }
@@ -313,7 +315,7 @@
 
   <!-- ===== COMPUERTA DE EDAD ===== -->
   <div id="age-gate">
-    <div class="ag-bg"></div>
+    <div class="ag-bg"><img src="assets/age-bg.jpg" alt="" aria-hidden="true"></div>
     <div class="ag-scrim"></div>
     <div class="ag-content">
       <div class="brand no-logo">
