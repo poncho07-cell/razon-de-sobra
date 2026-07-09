@@ -47,8 +47,8 @@
     /* ===== COMPUERTA DE EDAD ===== */
     #age-gate { position:fixed; inset:0; z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 24px; overflow:hidden; transition:opacity 0.7s ease, visibility 0.7s; }
     #age-gate.hidden { opacity:0; visibility:hidden; }
-    #age-gate .ag-bg { position:absolute; inset:-20px; z-index:0; background:var(--negro) url('assets/age-bg.jpg') center/cover; filter:blur(4px) brightness(0.62) saturate(1.05); transform:scale(1.06); }
-    #age-gate .ag-scrim { position:absolute; inset:0; z-index:1; background:radial-gradient(120% 100% at 50% 35%, rgba(23,19,13,0.35), rgba(11,9,6,0.82) 78%); }
+    #age-gate .ag-bg { position:absolute; inset:-20px; z-index:0; background:var(--negro) url('assets/age-bg.jpg') center/cover; filter:blur(2px) brightness(0.8) saturate(1.08); transform:scale(1.04); }
+    #age-gate .ag-scrim { position:absolute; inset:0; z-index:1; background:radial-gradient(120% 100% at 50% 35%, rgba(23,19,13,0.20), rgba(11,9,6,0.68) 78%); }
     #age-gate .ag-content { position:relative; z-index:2; }
     #age-gate .brand { margin-bottom:6px; display:flex; justify-content:center; }
     #age-gate .logo-media { height:clamp(190px,34vw,300px); width:auto; max-width:82vw; object-fit:contain; }
@@ -242,7 +242,7 @@
     #cierre .rule { margin:0 auto 40px; }
     #cierre blockquote { font-family:var(--display); font-weight:500; text-transform:uppercase; font-size:clamp(28px,4.4vw,58px); line-height:1.25; letter-spacing:1px; color:var(--hueso); max-width:980px; margin:0 auto; }
     #cierre .sobra { display:block; text-align:center; margin-top:26px; }
-    #cierre .cierre-img { max-width:520px; margin:64px auto 0; }
+    #cierre .cierre-img { max-width:520px; margin:44px auto 0; }
     #cierre .cierre-img .frame { aspect-ratio:1/1; }
 
     /* ===== FOOTER ===== */
@@ -558,7 +558,7 @@
   <!-- ===== CIERRE ===== -->
   <section id="cierre">
     <div class="rule reveal"></div>
-    <blockquote class="reveal" data-en="There will always be a reason to raise a glass.<br>And more often than not…<em class=&quot;sobra&quot;>reasons to spare.</em>">Siempre habrá una razón para brindar.<br>Y muchas veces…<em class="sobra">razones de sobra.</em></blockquote>
+    <blockquote class="reveal" data-en="There will always be a reason to raise a glass.<br>And more often than not…">Siempre habrá una razón para brindar.<br>Y muchas veces…</blockquote>
     <div class="cierre-img reveal">
       <div class="frame"><img class="media" src="assets/cierre.png" alt="Razón de Sobra"><div class="tag"><div class="ic">&#9671;</div><div class="fn">assets/cierre.png</div><div class="hint" data-en="Closing image">Imagen de cierre</div></div></div>
     </div>
